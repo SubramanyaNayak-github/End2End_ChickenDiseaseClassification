@@ -4,8 +4,7 @@ from ChickenDiseaseClassification.pipeline.stage01_data_ingestion import DataIng
 from ChickenDiseaseClassification.pipeline.stage02_data_validation import DataValidationTrainingPipeline
 from ChickenDiseaseClassification.pipeline.stage03_base_model import PrepareBaseModelTrainingPipeline
 from ChickenDiseaseClassification.pipeline.stage04_callback import CallbackPipeline
-
-
+from ChickenDiseaseClassification.pipeline.stage05_trainer import ModelTrainingPipeline
 
 
 # ------------------------------------------ Data_Ingestion ------------------------------------ 
@@ -62,6 +61,24 @@ try:
    logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
    obj = CallbackPipeline()
    obj.main()
+   logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
+except Exception as e:
+        logger.exception(e)
+        raise e
+
+
+
+# ------------------------------------------ Model_Trainer------------------------------------ 
+
+
+
+
+STAGE_NAME = "Training"
+try: 
+   logger.info(f"*******************")
+   logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
+   model_trainer = ModelTrainingPipeline()
+   model_trainer.main()
    logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
 except Exception as e:
         logger.exception(e)
