@@ -5,6 +5,8 @@ from ChickenDiseaseClassification.pipeline.stage02_data_validation import DataVa
 from ChickenDiseaseClassification.pipeline.stage03_base_model import PrepareBaseModelTrainingPipeline
 from ChickenDiseaseClassification.pipeline.stage04_callback import CallbackPipeline
 from ChickenDiseaseClassification.pipeline.stage05_trainer import ModelTrainingPipeline
+from ChickenDiseaseClassification.pipeline.stage06_evaluation import EvaluationPipeline
+
 
 
 # ------------------------------------------ Data_Ingestion ------------------------------------ 
@@ -80,6 +82,27 @@ try:
    model_trainer = ModelTrainingPipeline()
    model_trainer.main()
    logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
+except Exception as e:
+        logger.exception(e)
+        raise e
+
+
+
+
+
+# ------------------------------------------ Model_Evaluation------------------------------------ 
+
+
+
+
+STAGE_NAME = "Evaluation stage"
+try:
+   logger.info(f"*******************")
+   logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
+   model_evalution = EvaluationPipeline()
+   model_evalution.main()
+   logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
+
 except Exception as e:
         logger.exception(e)
         raise e
