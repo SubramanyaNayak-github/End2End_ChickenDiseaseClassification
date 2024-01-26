@@ -2,7 +2,7 @@ import os
 import urllib.request as request
 import zipfile
 from ChickenDiseaseClassification import logger
-from ChickenDiseaseClassification.utils.common import get_size
+from ChickenDiseaseClassification.utils.common import *
 from pathlib import Path
 from ChickenDiseaseClassification.entity.config_entity import (DataIngestionConfig)
 
