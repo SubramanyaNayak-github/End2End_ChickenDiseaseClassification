@@ -38,7 +38,13 @@ def predictRoute():
     image = request.json['image']
     decodeImage(image, clApp.filename)
     result = clApp.classifier.predict()
-    return jsonify(result)
+    if result == 1:
+        response_message = "Healthy Chicken"
+    elif result == 0:
+        response_message = "Coccidiosis affected Chicken"
+
+
+    return response_message
     
 
 
