@@ -86,3 +86,4 @@ class EvaluationConfig:
     all_params: dict
     params_image_size: list
     params_batch_size: int
+    mlflow_uri: str

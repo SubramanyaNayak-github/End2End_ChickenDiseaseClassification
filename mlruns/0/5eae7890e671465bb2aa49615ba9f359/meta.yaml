@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/5eae7890e671465bb2aa49615ba9f359/artifacts
+end_time: 1706526387057
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5eae7890e671465bb2aa49615ba9f359
+run_name: capricious-stag-187
+run_uuid: 5eae7890e671465bb2aa49615ba9f359
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706526299154
+status: 4
+tags: []
+user_id: hitam

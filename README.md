@@ -53,12 +53,25 @@ Now,
 open up you local host and port
 ```
 
+## DVC 
 
+
+- `Data Versioning`: DVC provides a mechanism to version control your datasets, ensuring that changes made to data are tracked and can be reverted if necessary. This enables reproducibility and collaboration in machine learning projects by maintaining a history of dataset changes over time.
+
+- `Reproducibility`: Similar to MLflow's focus on experiment tracking, DVC emphasizes reproducibility in machine learning workflows by capturing the dependencies and configurations used to produce a particular result. It enables users to reproduce any experiment or result by tracking data, code, and model versions.
+
+- `Model Dependency Management`: DVC extends version control beyond data to also include code and models. It helps manage dependencies between code, data, and models, ensuring that changes to one component are reflected in others. This ensures consistency and reliability in machine learning pipelines by maintaining the integrity of dependencies across different stages of development and deployment.
 
 ## DVC cmd
 - `dvc init`
-- `dvc repro`
+- `dvc repro`/ `dvc run`
 - `dvc dag`
+
+- `Dependency Tracking`
+- `Output Versioning`
+- `Simplified Configuration`
+- `Experiment Tracking`
+
 
 
 # AWS-CICD-Deployment-with-Github-Actions
@@ -134,3 +147,69 @@ open up you local host and port
     AWS_ECR_LOGIN_URI = demo>>  566373416292.dkr.ecr.ap-south-1.amazonaws.com
 
     ECR_REPOSITORY_NAME = simple-app
+
+
+
+
+
+ ## MLflow
+
+[Documentation](https://mlflow.org/docs/latest/index.html)
+
+
+##### cmd
+- mlflow ui
+
+### dagshub
+[dagshub](https://dagshub.com/)
+
+
+MLFLOW_TRACKING_URI=https://dagshub.com/subramanyanayak3/End2End_ChickenDiseaseClassification.mlflow \
+MLFLOW_TRACKING_USERNAME=subramanyanayak3 \
+MLFLOW_TRACKING_PASSWORD=b18ad68cf0c678f5f616a47081e6c4c129e4a844 \
+python script.py
+
+
+Run this to export as env variables:
+
+```bash
+
+export MLFLOW_TRACKING_URI=https://dagshub.com/subramanyanayak3/EndToEnd_MLProject_With_CiCd-Docker.mlflow
+
+export MLFLOW_TRACKING_USERNAME=subramanyanayak3 
+
+export MLFLOW_TRACKING_PASSWORD=b18ad68cf0c678f5f616a47081e6c4c129e4a844
+
+```
+
+## About MLflow 
+MLflow
+
+ - Its Production Grade
+ - Trace all of your expriements
+ - Logging & tagging your model
+
+
+# AZURE-CICD-Deployment-with-Github-Actions
+
+## Save pass:
+
+s3cEZKH5yytiVnJ3h+eI3qhhzf9q1vNwEi6+q+WGdd+ACRCZ7JD6
+
+
+## Run from terminal:
+
+docker build -t chickenapp.azurecr.io/chicken:latest .
+
+docker login chickenapp.azurecr.io
+
+docker push chickenapp.azurecr.io/chicken:latest
+
+
+## Deployment Steps:
+
+1. Build the Docker image of the Source Code
+2. Push the Docker image to Container Registry
+3. Launch the Web App Server in Azure 
+4. Pull the Docker image from the container registry to Web App server and run 
+
