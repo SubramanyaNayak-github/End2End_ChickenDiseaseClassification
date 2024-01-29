@@ -101,8 +101,8 @@ stages:
       size: 1453
     - path: src/ChickenDiseaseClassification/pipeline/stage06_evaluation.py
       hash: md5
-      md5: 091ef215557a67f50fa91b0df2b201e9
-      size: 895
+      md5: 7a96bd089e51563efdc6fdc95eb1d3cd
+      size: 900
     params:
       params.yaml:
         BATCH_SIZE: 16
