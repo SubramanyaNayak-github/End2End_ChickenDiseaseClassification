@@ -5,7 +5,7 @@ import mlflow
 import mlflow.tensorflow
 from ChickenDiseaseClassification.entity.config_entity import EvaluationConfig
 from ChickenDiseaseClassification.utils.common import save_json
-
+model = tf.keras.models.load_model("artifacts/training/model.h5")
 
 
 class Evaluation:

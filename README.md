@@ -192,6 +192,9 @@ MLflow
 
 # AZURE-CICD-Deployment-with-Github-Actions
 
+		 `Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy`
+		 `More GitHub Actions for Azure: https://github.com/Azure/actions`
+
 ## Save pass:
 
 s3cEZKH5yytiVnJ3h+eI3qhhzf9q1vNwEi6+q+WGdd+ACRCZ7JD6
