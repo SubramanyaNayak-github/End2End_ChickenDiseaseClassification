@@ -23,7 +23,7 @@
 Clone the repository
 
 ```bash
-https://github.com/SubramanyaNayak-github/EndToEnd_MLProject_With_CiCd-Docker
+https://github.com/SubramanyaNayak-github/End2End_ChickenDiseaseClassification
 
 ```
 ### STEP 01- Create a conda environment after opening the repository
