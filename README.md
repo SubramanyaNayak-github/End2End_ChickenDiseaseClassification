@@ -67,7 +67,8 @@ open up you local host and port
 - `dvc repro`/ `dvc run`
 - `dvc dag`
 
-- `Dependency Tracking`
+
+### `Dependency Tracking`
 - `Output Versioning`
 - `Simplified Configuration`
 - `Experiment Tracking`
